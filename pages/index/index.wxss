@@ -1,0 +1,11 @@
+/**index.wxss**/
+.v-picker-item {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.v-picker-item text {
+  flex: 0.3;
+}

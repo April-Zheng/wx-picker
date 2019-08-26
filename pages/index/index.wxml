@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="v-picker">
+<view class="v-picker-item">
+  <text>单列:</text>
+  <v-picker value="{{value}}" options="{{options}}" bind:confirm='select'></v-picker>
+</view>
+<view class="v-picker-item">
+  <text>多列:</text>
+  <v-picker multiSelect value="{{value2}}" options="{{options2}}" bind:confirm='select2'></v-picker>
+  </view>
+</view>

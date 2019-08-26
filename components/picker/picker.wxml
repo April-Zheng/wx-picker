@@ -1,0 +1,22 @@
+<!-- components/picker/picker.wxml -->
+<input placeholder="{{placeholder}}" value="{{value}}" disabled="{{true}}" bindtap="showPicker" />
+<view class="mask" wx:if="{{showPicker}}" bindtap="close">
+  <view class="picker" animation="{{animationData}}">
+    <view class="picker-header">
+      <button bindtap="cancel" class="cancal">取消</button>
+      <button bindtap="confirm" class="confirm">确定</button>
+    </view>
+    <picker-view bindchange="change" value="{{selectValues}}" class='pickerView' indicator-style="height: 50px;" style="width: 100%; height: 300px;">
+      <picker-view-column  wx:if="{{!multiSelect}}">
+        <view wx:for="{{options}}" wx:key="index" style="line-height: 50px;text-align:center">
+          {{label?item[label]:item}}
+        </view>
+      </picker-view-column>
+      <picker-view-column wx:if="{{multiSelect}}"  wx:for="{{options}}" wx:for-item="option" wx:key="index">
+        <view wx:for="{{option}}" wx:key="index" style="line-height: 50px;text-align:center">
+          {{label?item[label]:item}}
+        </view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>
